@@ -8,27 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body class="light">
-    <div class="pane divided" id="explanation-pane">
-        <div class="card rounded" id="welcome-card">
-            <div>
-                <h1>Welcome to Grocery Run</h1>
-                <p style="margin: 0;">The website to help you:</p>
-                <div>
-                    <p>
-                        Split <span class="rounded accent" id="expense-examples">groceries</span> with <span class="rounded accent" id="group-examples">housemates</span>.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="pane left" id="image-pane">
+        <img src="images/eyeoewe_logo.svg">
     </div>
-    <div class="pane divided" id="login-pane">
-        <div class="card rounded">
-            <button class="rounded">Log in</button>
-            <button class="rounded">Join a Group</button>
-            <button class="rounded accent">I'm New Here</button>
-        </div>
+    <div class="pane divided right" id="login-pane">
+        <button class="rounded">Log in</button>
+        <button class="rounded">Join a Group</button>
+        <button class="rounded accent">I'm New Here</button>
+
     </div>
-    <div class="pane" id="image-pane">
+    <div class="pane right" id="explanation-pane">
+        <div class="card rounded" style="padding: 0.125rem;">
+                <p style="margin: 0; padding: calc(0.5rem + 1px)">The website to help you:</p>
+                <p style="margin: 0; padding: calc(0.5rem + 1px)">Split <span class="rounde accen" id="expense-examples">groceries</span></p>
+                <p style="margin: 0; padding: calc(0.5rem + 1px)">with <span class="rounde accen" id="group-examples">housemates</span>.</p>
+        </div>
     </div>
 </body>
 </html>

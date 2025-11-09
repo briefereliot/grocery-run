@@ -11,7 +11,7 @@
 
     --border: hsl(200, 10%, 10%);
     --highlight: hsl(200, 10%, 30%);
-    --radius: 0.5rem;
+    --radius: calc(1rem + 1px);
     --rounded-shadow: 0px 2px 2px hsla(0,0%,0%, 0.07),
     0px 4px 4px hsla(0, 0%, 0%, 0.15);
     --divided-shadow: 4px 0px 2px -2px hsla(0,0%,0%, 0.07),
@@ -26,13 +26,13 @@ body.light {
     --bg: hsl(200, 10%, 95%);
     --bg-light: hsl(200, 10%, 100%);
 
-    --accent: hsl(200, 100%, 70%);
+    --accent: hsl(0, 0%, 71%);
     --hover: hsl(50, 100%, 70%);
 
     --text: hsl(200, 70%, 5%);
     --text-muted: hsl(200,10%, 30%);
 
-    --border: hsl(200, 10%, 80%);
+    --border: hsl(0, 0%, 0%);
     --highlight: hsl(200, 10%, 90%);
 }
 
@@ -41,7 +41,7 @@ body.light {
 }
 
 html, body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     height: 100%;
     margin: 0;
@@ -51,16 +51,20 @@ body {
     background: var(--bg-dark);
     color: var(--text-muted);
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
+    /*flex-wrap: wrap-reverse;*/
 }
 
 button {
     background: var(--bg-light);
     padding: 0.5rem 2rem;
     color: var(--text-muted);
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
     
+}
+
+button.rounded {
+    border-radius: calc(2rem + 2px);
 }
 
 button:hover {
@@ -102,13 +106,31 @@ span.rounded {
 .pane {
     display: flex;
     flex-direction: column;
-    flex: 0 1 auto;
-    justify-content: center;
     align-items: center;
     margin: 0;
-    flex: 1 1 400px;
+    flex: 1 1 100px;
     padding: 1.5rem;
-    gap: 0.5rem;
+    gap: 0.125rem;
+}
+
+.pane.left {
+    align-items: end;
+}
+
+.pane.right {
+    align-items: start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.right {
+    justify-content: right;
+}
+
+.left {
+    justify-content: left;
 }
 
 .card {
@@ -119,7 +141,12 @@ span.rounded {
     justify-content: center;
     flex-direction: column;
     padding: 1.5rem;
-    gap: 0.5rem;
+    gap: 0.125rem;
+}
+
+.card.hidden {
+    background: none;
+    border: 0px;
 }
 
 .accent {
@@ -128,10 +155,12 @@ span.rounded {
     font-weight: 500;
 }
 
-#image-pane {
-    background-image: url("images/receipts_stacked.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+#image-pane img {
+    height: calc(6.5rem + 6px);
+    margin-left: auto;
+    /*background-image: url("images/receipts_stacked.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
     /*box-shadow: 0 0 5px 5px var(--bg-dark) inset;*/
 }
 
